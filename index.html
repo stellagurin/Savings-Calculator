@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Savings Calculator</title>
+	<script type="text/javascript" src="calculate.js"></script>
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="unit">
+<h1>Savings Calculator</h1>
+<p>Calculate how much money could be save</p>
+	<div class="wrap">
+		<div class="table">
+			<div class="row">
+				<div class="cellright">$</div>
+				<div class="cellright">€</div>
+				<div class="cellright">£</div>
+			</div>
+			<div class="row">
+				<div class="cellright">
+					<input type="radio" name="currency" value="$" checked="checked" onclick="setprice('$')">
+				</div>
+				<div class="cellright">
+					<input type="radio" name="currency" value="€" onclick="setprice('€')">
+				</div>
+				<div class="cellright">
+					<input type="radio" name="currency" value="£" onclick="setprice('£')">
+				</div>
+			</div>
+		</div>
+	</div>
+	<form name="savingsCalculator">
+	<div class="table">
+		<div class="row">
+			<div class="cell">
+				* Price <span class="rshift" id="currency-1">$</span>
+			</div>
+			<div class="cell">
+				<input type="text" name="price" id="price" maxlength="10" size="9">
+			</div>
+		</div>
+		<div class="row">
+			<div class="cell">
+				* Discount <span class="rshift">%</span>
+			</div>
+			<div class="cell">
+				<input type="text" name="discount" id="discount" maxlength="5" size="9">
+			</div>
+		</div>
+	</div>
+	<div class="buttons">
+		<div class="table">
+			<div class="row">
+				<div class="cellright">
+					<input type="button" value="Calculate" onclick="calculate()"> <input type="button" value="Reset" onclick="reset()">
+				</div>		
+			</div>
+		</div>
+	</div>
+	<div class="table">
+		<div class="row">
+			<div class="cell">
+				Savings <span class="rshift" id="currency-2">$</span>
+			</div>
+			<div class="cell">
+				<input class="blue" type="text" name="savings" id="savings" size="9">
+			</div>
+		</div>
+		<div class="row">
+			<div class="cell">
+				Sale Price <span class="rshift" id="currency-3">$</span>
+			</div>
+			<div class="cell">
+				<input class="blue" type="text" name="salePrice" id="salePrice" size="9">
+			</div>
+		</div>
+	</div>
+	</form>
+</div>
+</body>
+</html>
